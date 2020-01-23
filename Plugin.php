@@ -1,6 +1,10 @@
 <?php namespace KosmosKosmos\SynoChat;
 
 use Backend;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Log;
+use KosmosKosmos\SynoChat\Classes\SynoLog;
+use KosmosKosmos\SynoChat\Models\SynoChatSettings;
 use System\Classes\PluginBase;
 
 /**
@@ -30,7 +34,9 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-
+        $this->app->bind('synolog', function () {
+            return new SynoLog(SynoChatSettings::get('token'), SynoChatSettings::get('url'));
+        });
     }
 
     /**
