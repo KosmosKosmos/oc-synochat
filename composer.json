@@ -1,0 +1,12 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/KosmosKosmos/laravel-synochat.git",
+            "no-api": true
+        }
+    ],
+    "require": {
+        "kosmoskosmos/synochat": "dev-master"
+    }
+}
