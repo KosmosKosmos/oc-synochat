@@ -17,9 +17,9 @@ class Plugin extends PluginBase
     {
         return [
             'name'        => 'SynoChat',
-            'description' => 'No description provided yet...',
+            'description' => 'October CMS Synology Chat integration plugin.',
             'author'      => 'KosmosKosmos',
-            'icon'        => 'icon-leaf'
+            'icon'        => 'icon-comments-o'
         ];
     }
 
@@ -90,6 +90,21 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-leaf',
                 'permissions' => ['kosmoskosmos.synochat.*'],
                 'order'       => 500,
+            ],
+        ];
+    }
+
+    public function registerSettings() {
+        return [
+            'synochat_settings' => [
+                'label' => 'SynoChat Settings',
+                'description' => 'Synology Chat integration settings',
+                'category' => 'SynoChat',
+                'icon' => 'icon-comments-o',
+                'class' => 'KosmosKosmos\SynoChat\Models\SynoChatSettings',
+                'order' => 500,
+                'keywords' => 'kosmos kosmoskosmos syno chat synology synochat',
+                'permissions' => ['*']
             ],
         ];
     }
