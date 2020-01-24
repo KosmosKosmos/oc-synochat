@@ -8,6 +8,8 @@ fields:
         disabled: true
         hidden: true
     url:
-        label: Synology Chat URL
+        label: kosmoskosmos.synochat::lang.settings.url
+        comment: kosmoskosmos.synochat::lang.settings.url_comment
     token:
-        label: Synology Chat Token
+        label: kosmoskosmos.synochat::lang.settings.token
+        comment: kosmoskosmos.synochat::lang.settings.token_comment

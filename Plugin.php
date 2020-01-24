@@ -103,8 +103,8 @@ class Plugin extends PluginBase
     public function registerSettings() {
         return [
             'synochat_settings' => [
-                'label' => 'SynoChat Settings',
-                'description' => 'Synology Chat integration settings',
+                'label' => 'kosmoskosmos.synochat::lang.settings.title',
+                'description' => 'kosmoskosmos.synochat::lang.settings.description',
                 'category' => 'SynoChat',
                 'icon' => 'icon-comments-o',
                 'class' => 'KosmosKosmos\SynoChat\Models\SynoChatSettings',
