@@ -70,12 +70,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'kosmoskosmos.synochat.some_permission' => [
+            'kosmoskosmos.synochat.administrate_synochat' => [
                 'tab' => 'SynoChat',
-                'label' => 'Some permission'
+                'label' => 'kosmoskosmos.synochat::lang.permissions.administrate'
             ],
         ];
     }
@@ -110,7 +108,7 @@ class Plugin extends PluginBase
                 'class' => 'KosmosKosmos\SynoChat\Models\SynoChatSettings',
                 'order' => 500,
                 'keywords' => 'kosmos kosmoskosmos syno chat synology synochat',
-                'permissions' => ['*']
+                'permissions' => ['kosmoskosmos.synochat.administrate_synochat']
             ],
         ];
     }
