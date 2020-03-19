@@ -8,5 +8,10 @@
     ],
     "require": {
         "kosmoskosmos/synochat": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf vendor/nesbot/carbon"
+        ]
     }
 }
